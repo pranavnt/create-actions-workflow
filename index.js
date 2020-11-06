@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const fs = require("fs");
 
 inquirer
   .prompt([
@@ -16,7 +17,6 @@ inquirer
         "C",
         "Kotlin",
         "Swift",
-        "Ruby on Rails",
       ],
     },
   ])
