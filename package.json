@@ -1,0 +1,8 @@
+{
+  "name": "create-actions-workflow",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pranavnt/create-actions-workflow",
+  "author": "Pranav Teegavarapu <pranavnt@outlook.com>",
+  "license": "MIT"
+}
