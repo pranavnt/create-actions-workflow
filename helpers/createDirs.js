@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-export function createDirs() {
+function createDirs() {
   if (!fs.existsSync("./.github")) {
     fs.mkdirSync("./.github");
   } else {

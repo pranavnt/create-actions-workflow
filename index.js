@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 
-import { createDirs } from "./helpers/createDirs.js";
+const createDirs = require("./helpers/createDirs");
 
 inquirer
   .prompt([
@@ -22,8 +22,14 @@ inquirer
         "Swift",
       ],
     },
-    {},
+    {
+      type: "list",
+      name: "nodeDependency",
+      message: "What dependency manager are you using",
+      choices: ["NPM", "Yarn"],
+      when: (answers) => answers.langChoice === "Javascript (including node)",
+    },
   ])
   .then((answers) => {
-    createDirs();
+    // createDirs.createDirs();
   });
