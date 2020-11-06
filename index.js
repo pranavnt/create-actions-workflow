@@ -2,6 +2,8 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 
+import { createDirs } from "./helpers/createDirs.js";
+
 inquirer
   .prompt([
     {
@@ -20,7 +22,8 @@ inquirer
         "Swift",
       ],
     },
+    {},
   ])
   .then((answers) => {
-    console.info("Answer:", answers.langChoice);
+    createDirs();
   });

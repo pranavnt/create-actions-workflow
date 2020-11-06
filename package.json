@@ -6,7 +6,8 @@
   "author": "Pranav Teegavarapu <pranavnt@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^7.3.3"
+    "inquirer": "^7.3.3",
+    "js-yaml": "^3.14.0"
   },
   "scripts": {
     "start": "node index.js"
