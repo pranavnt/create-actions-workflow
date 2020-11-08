@@ -1,11 +1,12 @@
+// dependencies
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 
-const createDirs = require("./helpers/createDirs");
-
+// inquirer prompt
 inquirer
   .prompt([
+    // language selection
     {
       type: "list",
       name: "langChoice",
@@ -22,12 +23,19 @@ inquirer
         "Swift",
       ],
     },
+    // dependency installation
     {
       type: "list",
       name: "nodeDependency",
       message: "What dependency manager are you using",
       choices: ["NPM", "Yarn"],
       when: (answers) => answers.langChoice === "Javascript (including node)",
+    },
+    // build command
+    {
+      type: "input",
+      name: "buildCommand",
+      message: "What is your build command",
     },
   ])
   .then((answers) => {
