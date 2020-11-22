@@ -1,2 +1,2 @@
 # actions-cli
-Create a GitHub Actions workflow from the command line!
+Create a GitHub Actions CI workflow from the command line!
